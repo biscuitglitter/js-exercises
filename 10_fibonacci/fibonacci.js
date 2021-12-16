@@ -1,19 +1,33 @@
-const fibonacci = function(index){
+var n1 = 0
+    var n2 = 1
+    var i 
+    let nextnumb
+    const arr = [n1,n2]
+const fibonacci = function(num) {
+if (num < 0) {
+    return "ERROR";
+  } else {
+    for (i = 2; i <= num; i++) {
+    nextnumb = n1 + n2
+    n1 = n2 
+    n2 = nextnumb
+    arr.push(nextnumb)
+    }
+    return nextnumb
+    }
+   }
+fibonacci(4)
+fibonacci(6)
+fibonacci(10)
+fibonacci(15)
+fibonacci(25)
+fibonacci(-25)
+fibonacci("1")
+fibonacci("2")
+fibonacci("8")
 
-    let arr = [1,1];
-    
-    for (let i = 0; i<index-3; i++){ 
-    let last= arr.at(-1); 
-    let secondLast = arr.at(-2); 
-    let push = last+secondLast; 
-    arr.push(push); 
-    console.log(arr);
-    
-    }
-    return arr[index-1]; 
-    }
-    
-    fibonacci(4);
+
+
 
 // Do not edit below this line
 module.exports = fibonacci;
