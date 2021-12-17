@@ -1,21 +1,22 @@
-var n1 = 0
-    var n2 = 1
-    var i 
-    let nextnumb
-    const arr = [n1,n2]
 const fibonacci = function(num) {
-if (num < 0) {
-    return "ERROR";
-  } else {
-    for (i = 2; i <= num; i++) {
-    nextnumb = n1 + n2
-    n1 = n2 
-    n2 = nextnumb
-    arr.push(nextnumb)
-    }
-    return nextnumb
-    }
-   }
+  let n1 = 0
+      let n2 = 1
+      let i 
+      let nextnumb
+      const arr = [n1,n2]
+  if (num < 0) {
+      return "ERROR";
+    } else {
+      for (i = 0; i <= num-2; i++) {
+      nextnumb = n1 + n2
+      n1 = n2 
+      n2 = nextnumb
+      arr.push(nextnumb)
+      }
+      return nextnumb
+      }
+     }
+fibonacci(6)
 fibonacci(4)
 fibonacci(6)
 fibonacci(10)
